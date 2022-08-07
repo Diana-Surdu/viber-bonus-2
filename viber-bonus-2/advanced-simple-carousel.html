@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two stage carousel | Advanced CSS selectors</title>
+  <style>
+    body {
+      background-color: #234;
+    }
+    .carousel {
+      width: 840px;
+      /*border: 3px solid green;*/
+
+      /*NEW - center a block horizontaly*/
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+
+      overflow: hidden;
+      box-shadow: 0 0 10px 2px #111;
+
+    }
+
+    .carousel .slide {
+      width: 2700px;
+      /*border: 1px solid red;*/
+      transition: 1s;
+    }
+    .carousel .controls {
+      text-align: center;
+
+    }
+
+    .carousel .controls a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .carousel .controls a:first-child:hover {
+      font-size: 20px;
+    }
+
+    .carousel .controls a:nth-child(2):hover {
+      font-size: 20px;
+    }
+
+    .carousel .controls a:nth-child(3):hover {
+      font-size: 20px;
+    }
+
+
+
+
+
+
+    /*This is HW-1!!!*/
+    /*.carousel #left:target .slide {
+      transform: translateX(0);
+    }
+
+    .carousel #right:target .slide {
+      transform: translateX(-840px);
+    }*/
+
+
+    /*This is HW*-2 !!!*/
+    .carousel #scroll-1:target .slide {
+      transform: translateX(0);
+    }
+
+    .carousel #scroll-2:target .slide {
+      transform: translateX(-840px);
+    }
+
+    .carousel #scroll-3:target .slide {
+      transform: translateX(-1680px);
+    }
+
+    img {
+      margin-right: -4px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+
+    <!--This is HW*-1 !!!
+    <div id="LEFT"></div>
+      <div id="RIGHT-2"></div> instead of
+      <div id="scroll-1">
+      <div id="scroll-2">
+      <div id="scroll-3">
+    --> 
+    
+    <!--This is HW*-2 !!!-->
+    <div id="scroll-1">
+      <div id="scroll-2">
+        <div id="scroll-3">
+          <div class="slide">
+
+            <img src="https://i.picsum.photos/id/486/280/400.jpg?hmac=h6EBwpEmFHmgYSCh5sKZSMcU-_CPjRXt2Gygy1D9ZU4" alt="">
+            <img src="https://i.picsum.photos/id/892/280/400.jpg?hmac=W0hMD19rZVmexgPSyfl3co2p05GLmo2UyPS31ujwh1A" alt="">
+            <img src="https://i.picsum.photos/id/242/280/400.jpg?hmac=Vi9fPd_JbZWuZIf2-0XyGZou2QBsFITLjLz09pVrWck" alt="">
+            <img src="https://i.picsum.photos/id/17/280/400.jpg?hmac=opbEGoJIo0ckpNRP6YC8Y3ZZmdrzwIzZ3FtvtGs37RM" alt="">
+            <img src="https://i.picsum.photos/id/214/280/400.jpg?hmac=6F3z9EtVn3Wl_WdKawIAJWNdWyHbrAt5VnvazMNF6lM" alt="">
+            <img src="https://i.picsum.photos/id/428/280/400.jpg?hmac=MuR8yv7Ul4Gb7dgnqwq3sebG41KhPtamD1x1XLOljRo" alt="">
+            <img src="https://i.picsum.photos/id/164/280/400.jpg?hmac=-mI5Dmb4bo8FkFzYPg8gzMsXB1imZdozU69Zmdq5Q9I" alt="">
+            <img src="https://i.picsum.photos/id/427/280/400.jpg?hmac=2CP2ikvEcTA4FgGUvUATUnsQHf8jGvlmVJLpTuMvZlQ" alt="">
+            <img src="https://i.picsum.photos/id/149/280/400.jpg?hmac=hP2km6fyYEBkanH24j2ul4HCw9JSc-5GeBbrIxYLiDI" alt="">
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="controls">
+      <!--This is HW-1 !!!-->
+      <!--<a href="#LEFT">◄</a>
+      <a href="#RIGHT">▶</a>-->
+
+      <!--This is HW*-2 !!! -->
+      <a href="#scroll-1">1</a>
+      <a href="#scroll-2">2</a>
+      <a href="#scroll-3">3</a>
+    </div>
+  </div>
+
+  
+</body>
+</html>

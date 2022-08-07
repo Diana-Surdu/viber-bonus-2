@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Advanced Selectors | Dropdown menu</title>
+  <style>
+    body {
+      background-color: #333;
+      color: rgb(67, 66, 66);
+      font-family: Arial;
+    }
+    label {
+      background-color: hsl(0deg 0% 78%);
+      padding: 10px;
+      border-radius: 10px;
+      width: 113px;
+      box-shadow: 0 2px 3px 0px #55555557;
+      
+    }
+    nav label {
+      cursor: pointer;
+      user-select: none;
+    }
+    nav label::after {
+      content: "▼";
+      margin-left: 25px;
+    }
+    ul {
+      background-color: hsl(0, 0%, 90%);
+      margin: 15px;
+      width: 120px;
+      list-style: none;
+      padding-left: 0;
+      padding-top: 15px;
+      
+      
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      padding: 5px;
+      color: rgb(67, 66, 66);
+    }
+    
+    nav ul {
+      display: none;
+    }
+
+    nav input:checked+label+ul {
+      display: block;
+    }
+    nav input:checked+label::after {
+      content: "▲";
+    }
+    nav input { 
+      display: none;
+    }
+    nav li:hover {
+      background-color: hsl(0deg 0% 78%);
+    }
+  </style>
+</head>
+<body>
+  
+  <nav>
+    <input type="checkbox" id="toggler">
+      <label for="toggler">
+        <span> Dropdown</span> 
+      </label>
+      <ul>
+        <li><a href="#">item 1</a></li>
+        <li><a href="#">item 2</a></li>
+        <li><a href="#">item 3</a></li>
+      </ul>
+  </nav>
+
+
+
+</body>
+</html>
